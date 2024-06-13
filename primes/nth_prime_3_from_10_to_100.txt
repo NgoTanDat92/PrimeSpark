@@ -1,0 +1,1 @@
+The 3 prime number in range 10 to 100 is: 17
