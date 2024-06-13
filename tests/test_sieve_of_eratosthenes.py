@@ -5,8 +5,8 @@ from ..src.sieve_of_eratosthenes import SieveOfEratosthenes
 class TestSieveOfEratosthenes(unittest.TestCase):
     def test_sieve_initialization(self):
         sieve = SieveOfEratosthenes(10)
-        self.assertEqual(sieve.limit, 10)
-        self.assertEqual(sieve.primes, [2, 3, 5, 7])
+        self.assertEqual(sieve.get_limit(), 10)
+        self.assertEqual(sieve.get_primes(), [2, 3, 5, 7])
 
     def test_get_primes(self):
         sieve = SieveOfEratosthenes(20)

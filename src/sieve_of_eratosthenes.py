@@ -12,13 +12,16 @@ class SieveOfEratosthenes:
                     primes[j] = False
         return [i for i, is_prime in enumerate(primes) if is_prime]
 
+    def get_limit(self):
+        return self.limit
+
     def get_primes(self):
         return self.primes
 
     def get_primes_in_range(self, start, end):
         if start > end:
             raise ValueError("Start must be less than or equal to End.")
-        return [p for p in self.primes if start <= p <= end]
+        return [p for p in self.get_primes() if start <= p <= end]
 
     def get_nth_prime_in_range(self, start, end, nth):
         primes_in_range = self.get_primes_in_range(start, end)
