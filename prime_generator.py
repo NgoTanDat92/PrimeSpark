@@ -4,7 +4,7 @@ import argparse
 from src.sieve_of_eratosthenes import SieveOfEratosthenes
 
 
-def get_primes_in_range(sc, start, end):
+def get_primes_in_range(sc: SparkContext, start: int, end: int) -> list[int]:
     if start > end:
         raise ValueError("Start must be less than or equal to End.")
 
@@ -19,7 +19,9 @@ def get_primes_in_range(sc, start, end):
     return primes_in_range
 
 
-def generate_primes_in_range(sc, start, end, output_dir):
+def generate_primes_in_range(
+    sc: SparkContext, start: int, end: int, output_dir: str
+) -> None:
     try:
         primes_in_range = get_primes_in_range(sc, start, end)
 
@@ -36,7 +38,9 @@ def generate_primes_in_range(sc, start, end, output_dir):
         print(f"Error: {e}")
 
 
-def get_nth_prime_in_range(sc, start, end, nth, output_dir):
+def get_nth_prime_in_range(
+    sc: SparkContext, start: int, end: int, nth: int, output_dir: str
+) -> None:
     try:
         primes_in_range = get_primes_in_range(sc, start, end)
 
@@ -60,7 +64,7 @@ def get_nth_prime_in_range(sc, start, end, nth, output_dir):
         print(f"Error: {e}")
 
 
-def main(method, start, end, nth, output_dir):
+def main(method: str, start: int, end: int, nth: int, output_dir: str) -> None:
     conf = SparkConf().setAppName("PrimeNumberGenerator")
     sc = SparkContext(conf=conf)
 
