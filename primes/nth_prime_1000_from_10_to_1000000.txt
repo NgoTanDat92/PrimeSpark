@@ -1,1 +1,1 @@
-The 1000 prime number in range 10 to 1000000 is: 7949
+There are 78494 in range 10 to 1000000. The 1000 prime number is: 7949
