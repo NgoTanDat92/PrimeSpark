@@ -1,5 +1,0 @@
-There are 4 prime numbers in range 1 to 10:
-2
-3
-5
-7
