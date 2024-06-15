@@ -29,10 +29,14 @@ def generate_primes_in_range(
         output_path = os.path.join(output_dir, output_file)
 
         with open(output_path, "w") as f:
-            f.write(f"There are {len(primes_in_range)} prime numbers in range {start} to {end}:\n")
+            f.write(
+                f"There are {len(primes_in_range)} prime numbers in range {start} to {end}:\n"
+            )
             f.write("\n".join(map(str, primes_in_range)))
 
-        print(f"There are {len(primes_in_range)} prime numbers in range {start} to {end}, these are written to {output_path}")
+        print(
+            f"There are {len(primes_in_range)} prime numbers in range {start} to {end}, these are written to {output_path}"
+        )
 
     except Exception as e:
         print(f"Error: {e}")
@@ -57,7 +61,9 @@ def get_nth_prime_in_range(
             f.write(
                 f"There are {len(primes_in_range)} in range {start} to {end}. The {nth} prime number is: {nth_prime}\n"
             )
-        print(f"There are {len(primes_in_range)} in range {start} to {end}. The {nth} prime number is: {nth_prime}, written to {nth_prime_path}")
+        print(
+            f"There are {len(primes_in_range)} in range {start} to {end}. The {nth} prime number is: {nth_prime}, written to {nth_prime_path}"
+        )
 
     except Exception as e:
         print(f"Error: {e}")
