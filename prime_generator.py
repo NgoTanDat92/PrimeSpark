@@ -28,6 +28,8 @@ def generate_primes_in_range(
         output_file = f"output_primes_{start}_{end}.txt"
         output_path = os.path.join(output_dir, output_file)
 
+        os.makedirs(output_dir, exist_ok=True)
+
         with open(output_path, "w") as f:
             f.write(
                 f"There are {len(primes_in_range)} prime numbers in range {start} to {end}:\n"
@@ -56,6 +58,8 @@ def get_nth_prime_in_range(
 
         nth_prime_file = f"nth_prime_{nth}_from_{start}_to_{end}.txt"
         nth_prime_path = os.path.join(output_dir, nth_prime_file)
+
+        os.makedirs(output_dir, exist_ok=True)
 
         with open(nth_prime_path, "w") as f:
             f.write(
