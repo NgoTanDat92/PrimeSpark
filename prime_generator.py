@@ -40,6 +40,8 @@ def generate_primes_in_range(
         output_file = f"output_primes_{start}_{end}.txt"
         output_path = os.path.join(output_dir, output_file)
 
+        print("hello")
+
         os.makedirs(output_dir, exist_ok=True)
 
         with open(output_path, "w") as f:
